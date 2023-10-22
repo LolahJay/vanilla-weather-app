@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
 </head>
 <body>
     <div class="container">
         <div class="weather-app">
-        <h1>Cape Town, CT, South Africa</h1>
+        <h1 id="city">New York</h1>
         <ul>
             <li>Saturday 23:21 </li>
-            <li>Clear</li>
+            <li id="description"></li>
         </ul>
         <div class="row">
             <div class="col-md-6">
                 <img src="https://www.clipartmax.com/middle/m2i8N4Z5m2A0Z5G6_weather-icons-stock-vector-sunshine-weather-icon-transparent/" alt="Clear"/>
-                10&deg; C | &deg;F
+                id="icon"
+                <strong id="temperature" ></strong>C | &deg;F
             </div>
             <div class="col-md-6">
                 <ul>
