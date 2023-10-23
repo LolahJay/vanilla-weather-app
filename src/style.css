@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #4c4c54;
+  color: rgb(40, 52, 180);
   font-size: 30px;
   font-weight: 100;
   line-height: 28px;
@@ -15,7 +15,7 @@ ul {
 }
 li {
   list-style: none;
-  color: rgb(142, 137, 137);
+  color: rgb(40, 52, 180);
   font-size: 12px;
   font-weight: 100;
   list-style: 20px;
@@ -26,11 +26,12 @@ li {
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #4c4c54;
+  border: 2px solid #1b0b6c;
   border-radius: 5px;
+  background-color: #f4eef5;
 }
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
+  color: rgb(40, 52, 180);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
