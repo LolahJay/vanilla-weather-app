@@ -41,11 +41,11 @@ function displayForecast(response) {
           <img src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png" alt="" width="42" />
-          <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-temperature-max">${Math.round(
+          <div class="weather-forecast-temp">
+            <span class="weather-forecast-temp-max">${Math.round(
               forecastDay.temp.max
             )}°</span>
-            <span class="weather-forecast-temperature-min">${Math.round(
+            <span class="weather-forecast-temp-min">${Math.round(
               forecastDay.temp.min
             )}°</span>
           </div>
@@ -97,11 +97,32 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+  let cityInput = document.querySelector("#city-form-input");
+  searchCity(cityInput.value);
 }
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Paris");
+
+function displayForecast() {
+  let day = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHTML = "";
+  day.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temp">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temp">9º</div>
+        </div>
+      </div>`;
+  });
+}
+displayForecast();
