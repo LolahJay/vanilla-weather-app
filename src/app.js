@@ -110,7 +110,7 @@ search("Paris");
 function showForecast() {
   let day = ["Sat", "Sun", "Mon", "Tue", "Wed"];
   let forecastHTML = "";
-  response.data.daily.day.forEach(function (day) {
+  days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
@@ -128,5 +128,6 @@ function showForecast() {
         </div>
       </div>`;
   });
+  document.querySelector("#forecast").innerHTML = forecastHTML;
 }
 showForecast();
